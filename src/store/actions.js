@@ -1,16 +1,16 @@
 import axiosApi from "../axiosApi";
-import { CHANGE_INPUT_VALUE, CHANGE_LINK_INFO, CHANGE_LINK_INFO_FAILURE } from "./actionsTypes"
+import { CHANGE_INPUT_VALUE, GET_SHORTEN_LINK, GET_SHORTEN_LINK_FAILURE } from "./actionsTypes"
 
 export const changeInput = value => {
     return { type: CHANGE_INPUT_VALUE, value };
 };
 
-const changeLinkInfo = info => {
-    return { type: CHANGE_LINK_INFO, info };
+const changeLinkInfo = shortenLink => {
+    return { type: GET_SHORTEN_LINK, shortenLink };
 };
 
 const fetchShortLinkFailure = error =>{
-    return {type: CHANGE_LINK_INFO_FAILURE, error};
+    return {type: GET_SHORTEN_LINK_FAILURE, error};
 };
 
 
